@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cysmgukdsk0gi"]
+
+[node name="HitBoxComponent" type="CollisionShape2D"]
