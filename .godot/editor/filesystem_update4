@@ -1,3 +1,4 @@
-res://Levels/Debug/Character debug.tscn
-res://Scripts/Controllers/PlayerController.gd
 res://Prefabs/Character.tscn
+res://Scripts/Controllers/PlayerController.gd
+res://Scripts/Utilities/StateMachine.gd
+res://Scripts/Utilities/State.gd

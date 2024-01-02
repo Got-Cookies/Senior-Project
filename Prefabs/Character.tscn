@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://i1nsw6t3ylom"]
+[gd_scene load_steps=38 format=3 uid="uid://i1nsw6t3ylom"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/PlayerController.gd" id="1_dgavs"]
 [ext_resource type="Texture2D" uid="uid://bf654fr38qc82" path="res://Sprites/Prototype Character/Character Idle 48x48.png" id="1_exwgj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Controllers/AnimationController.gd" id="4_6ndwq"]
 [ext_resource type="Texture2D" uid="uid://cj2c3t68crme7" path="res://Sprites/Prototype Character/player land 48x48.png" id="4_cofq7"]
 [ext_resource type="PackedScene" uid="uid://cysmgukdsk0gi" path="res://Components/HitBoxComponent.tscn" id="4_klfyd"]
+[ext_resource type="Script" path="res://Scripts/Utilities/StateMachine.gd" id="8_8huyl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmak0"]
 atlas = ExtResource("1_exwgj")
@@ -241,3 +242,6 @@ script = ExtResource("4_6ndwq")
 position = Vector2(0, 1.375)
 scale = Vector2(1, 1.325)
 shape = SubResource("RectangleShape2D_tr7k1")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("8_8huyl")

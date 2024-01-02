@@ -1,22 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701718558
+::res://::1704163281
 icon.svg::CompressedTexture2D::492056026445284337::1696003058::1696003094::1::::<><>::
-::res://Components/::1700020967
-Dashcomponent.tscn::PackedScene::3960108455518506363::1700018515::0::1::::<><>::
+README.md::TextFile::-1::1701718666::0::1::::<><>::
+::res://Components/::1703718143
 HitBoxComponent.tscn::PackedScene::6495272799024511752::1698031803::0::1::::<><>::
-PlayerDash.gd::GDScript::-1::1700020967::0::1::::<>Node<>::
-::res://Levels/::1698031887
-::res://Levels/Debug/::1701718546
-Character debug.tscn::PackedScene::1257839724771820528::1701718546::0::1::::<><>::uid://i1nsw6t3ylom::::res://Prefabs/Character.tscn<>uid://hamddbmsaj4t::::res://icon.svg
-::res://Prefabs/::1701718547
-Character.tscn::PackedScene::616007240210352436::1701718547::0::1::::<><>::res://Scripts/Controllers/PlayerController.gd<>uid://bf654fr38qc82::::res://Sprites/Prototype Character/Character Idle 48x48.png<>uid://cvm6gl605j2vm::::res://Sprites/Prototype Character/player jump 48x48.png<>uid://bhmox6ri0svpa::::res://Sprites/Prototype Character/PlayerWalk 48x48.png<>res://Scripts/Controllers/AnimationController.gd<>uid://cj2c3t68crme7::::res://Sprites/Prototype Character/player land 48x48.png<>uid://cysmgukdsk0gi::::res://Components/HitBoxComponent.tscn
-::res://Scripts/::1696219911
-::res://Scripts/Controllers/::1701718546
+::res://Levels/::1703655195
+::res://Levels/Debug/::1703718078
+Character debug.tscn::PackedScene::1257839724771820528::1703718078::0::1::::<><>::uid://i1nsw6t3ylom::::res://Prefabs/Character.tscn<>uid://hamddbmsaj4t::::res://icon.svg
+::res://Prefabs/::1703902008
+Character.tscn::PackedScene::616007240210352436::1703902008::0::1::::<><>::res://Scripts/Controllers/PlayerController.gd<>uid://bf654fr38qc82::::res://Sprites/Prototype Character/Character Idle 48x48.png<>uid://cvm6gl605j2vm::::res://Sprites/Prototype Character/player jump 48x48.png<>uid://bhmox6ri0svpa::::res://Sprites/Prototype Character/PlayerWalk 48x48.png<>res://Scripts/Controllers/AnimationController.gd<>uid://cj2c3t68crme7::::res://Sprites/Prototype Character/player land 48x48.png<>uid://cysmgukdsk0gi::::res://Components/HitBoxComponent.tscn
+::res://Scripts/::1703716918
+::res://Scripts/Controllers/::1703898348
 AnimationController.gd::GDScript::-1::1701036146::0::1::::<>AnimatedSprite2D<>::
-PlayerController.gd::GDScript::-1::1701718546::0::1::::<>CharacterBody2D<>::
+PlayerController.gd::GDScript::-1::1703898348::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Misc/::1696219898
-::res://Scripts/Utilities/::1698031878
-::res://Sprites/::1696014559
+::res://Scripts/States/::1703716830
+::res://Scripts/Utilities/::1703898348
+State.gd::GDScript::-1::1703898348::0::1::::State<>Node<>::
+::res://Sprites/::1703655195
 ::res://Sprites/Prototype Character/::1699928985
 Character Idle 48x48.png::CompressedTexture2D::2803234200260701013::1696014536::1696014564::1::::<><>::
 player jump 48x48.png::CompressedTexture2D::6273473185194939082::1699928980::1699928980::1::::<><>::
