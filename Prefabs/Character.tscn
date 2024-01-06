@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://i1nsw6t3ylom"]
+[gd_scene load_steps=40 format=3 uid="uid://i1nsw6t3ylom"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/PlayerController.gd" id="1_dgavs"]
 [ext_resource type="Texture2D" uid="uid://bf654fr38qc82" path="res://Sprites/Prototype Character/Character Idle 48x48.png" id="1_exwgj"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cysmgukdsk0gi" path="res://Components/HitBoxComponent.tscn" id="4_klfyd"]
 [ext_resource type="Script" path="res://Scripts/Utilities/StateMachine.gd" id="8_8huyl"]
 [ext_resource type="Script" path="res://Scripts/States/Idle.gd" id="9_x2dg5"]
+[ext_resource type="Script" path="res://Scripts/Input/InputComponent.gd" id="10_cwyjl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmak0"]
 atlas = ExtResource("1_exwgj")
@@ -244,10 +245,15 @@ position = Vector2(0, 1.375)
 scale = Vector2(1, 1.325)
 shape = SubResource("RectangleShape2D_tr7k1")
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initState", "_input")]
 script = ExtResource("8_8huyl")
+initState = NodePath("Idle")
+_input = NodePath("../InputComponent")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("9_x2dg5")
 
-[node name="InputHandler" type="Node" parent="."]
+[node name="InputComponent" type="Node" parent="."]
+script = ExtResource("10_cwyjl")
+
+[node name="PlayerInput" type="Node" parent="InputComponent"]

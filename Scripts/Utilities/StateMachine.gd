@@ -1,6 +1,7 @@
 class_name StateMachine extends Node
 
 @export var initState : State
+@export var _input : InputComponent
 
 var currentState : State # Active State
 var states : Dictionary  = {} # Transition to state, if conidtion are met
@@ -16,11 +17,11 @@ func _init():
 		initState.enter()
 		currentState = initState
 
-func _process(delta):
-	currentState.tick()
+func _process(delta): 
+	currentState.tick(_input.state)
 
 func _physics_process(delta):
-	currentState.physics_tick()
+	currentState.physics_tick(_input.state)
 
 func on_transition(from : State, to : State):
 	pass
