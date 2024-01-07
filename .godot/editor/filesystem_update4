@@ -1,8 +1,17 @@
 res://Prefabs/Character.tscn
 res://Scripts/Controllers/PlayerController.gd
-res://Scripts/Utilities/InputHandler.gd
-res://Scripts/Input/InputState.gd
-res://Scripts/Input/InputComponent.gd
-res://Scripts/States/Idle.gd
-res://Scripts/Utilities/StateMachine.gd
 res://Scripts/Utilities/State.gd
+res://Scripts/Input/InputState.gd
+res://Scripts/Input/InputHandler.gd
+res://Scripts/Utilities/StateMachine.gd
+res://Scripts/States/Idle.gd
+res://Scripts/States/PlayerIdle.gd
+res://Scripts/Input/InputComponent.gd
+res://Prefabs/PlayerInput.gd
+res://Prefabs/Walk.gd
+res://Scripts/Utilities/StateMachine/StateMachine.gd
+res://Scripts/Utilities/Input/InputComponent.gd
+res://Scripts/Utilities/StateMachine/State.gd
+res://Scripts/States/Walk.gd
+res://Scripts/Utilities/Input/InputState.gd
+res://Scripts/Input Handlers/PlayerInput.gd

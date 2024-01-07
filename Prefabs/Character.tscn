@@ -1,15 +1,16 @@
-[gd_scene load_steps=40 format=3 uid="uid://i1nsw6t3ylom"]
+[gd_scene load_steps=41 format=3 uid="uid://i1nsw6t3ylom"]
 
-[ext_resource type="Script" path="res://Scripts/Controllers/PlayerController.gd" id="1_dgavs"]
 [ext_resource type="Texture2D" uid="uid://bf654fr38qc82" path="res://Sprites/Prototype Character/Character Idle 48x48.png" id="1_exwgj"]
 [ext_resource type="Texture2D" uid="uid://cvm6gl605j2vm" path="res://Sprites/Prototype Character/player jump 48x48.png" id="2_lnh7u"]
 [ext_resource type="Texture2D" uid="uid://bhmox6ri0svpa" path="res://Sprites/Prototype Character/PlayerWalk 48x48.png" id="2_xh6vk"]
 [ext_resource type="Script" path="res://Scripts/Controllers/AnimationController.gd" id="4_6ndwq"]
 [ext_resource type="Texture2D" uid="uid://cj2c3t68crme7" path="res://Sprites/Prototype Character/player land 48x48.png" id="4_cofq7"]
 [ext_resource type="PackedScene" uid="uid://cysmgukdsk0gi" path="res://Components/HitBoxComponent.tscn" id="4_klfyd"]
-[ext_resource type="Script" path="res://Scripts/Utilities/StateMachine.gd" id="8_8huyl"]
-[ext_resource type="Script" path="res://Scripts/States/Idle.gd" id="9_x2dg5"]
-[ext_resource type="Script" path="res://Scripts/Input/InputComponent.gd" id="10_cwyjl"]
+[ext_resource type="Script" path="res://Scripts/Utilities/StateMachine/StateMachine.gd" id="8_8huyl"]
+[ext_resource type="Script" path="res://Scripts/States/PlayerIdle.gd" id="9_ojfjj"]
+[ext_resource type="Script" path="res://Scripts/States/Walk.gd" id="10_6xmj7"]
+[ext_resource type="Script" path="res://Scripts/Utilities/Input/InputComponent.gd" id="10_cwyjl"]
+[ext_resource type="Script" path="res://Scripts/Input Handlers/PlayerInput.gd" id="11_lcdln"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmak0"]
 atlas = ExtResource("1_exwgj")
@@ -226,11 +227,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr7k1"]
 size = Vector2(20, 22.0755)
 
-[node name="Character base" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 slide_on_ceiling = false
-script = ExtResource("1_dgavs")
-max_ground_Speed = 6.0
-low_jump_Multiplier = 1.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -245,15 +243,24 @@ position = Vector2(0, 1.375)
 scale = Vector2(1, 1.325)
 shape = SubResource("RectangleShape2D_tr7k1")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initState", "_input")]
-script = ExtResource("8_8huyl")
-initState = NodePath("Idle")
-_input = NodePath("../InputComponent")
-
-[node name="Idle" type="Node" parent="StateMachine"]
-script = ExtResource("9_x2dg5")
-
 [node name="InputComponent" type="Node" parent="."]
 script = ExtResource("10_cwyjl")
 
 [node name="PlayerInput" type="Node" parent="InputComponent"]
+script = ExtResource("11_lcdln")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initState", "_input")]
+script = ExtResource("8_8huyl")
+initState = NodePath("PlayerIdle")
+_input = NodePath("../InputComponent")
+
+[node name="PlayerIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("entity")]
+script = ExtResource("9_ojfjj")
+entity = NodePath("../..")
+
+[node name="Move" type="Node" parent="StateMachine" node_paths=PackedStringArray("entity")]
+script = ExtResource("10_6xmj7")
+accel = 12.0
+deAccel = 16.0
+max_Speed = 20.0
+entity = NodePath("../..")

@@ -23,6 +23,16 @@ window/vsync/vsync_mode=0
 
 movie_writer/disable_vsync=true
 
+[file_customization]
+
+folder_colors={
+"res://Components/": "purple",
+"res://Levels/": "blue",
+"res://Prefabs/": "green",
+"res://Scripts/": "red",
+"res://Sprites/": "yellow"
+}
+
 [filesystem]
 
 import/blender/enabled=false

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704514240
+::res://::1704604765
 icon.svg::CompressedTexture2D::492056026445284337::1696003058::1696003094::1::::<><>::
 README.md::TextFile::-1::1701718666::0::1::::<><>::
 ::res://Components/::1704168084
@@ -7,21 +7,27 @@ HitBoxComponent.tscn::PackedScene::6495272799024511752::1698031803::0::1::::<><>
 ::res://Levels/::1703655195
 ::res://Levels/Debug/::1703718078
 Character debug.tscn::PackedScene::1257839724771820528::1703718078::0::1::::<><>::uid://i1nsw6t3ylom::::res://Prefabs/Character.tscn<>uid://hamddbmsaj4t::::res://icon.svg
-::res://Prefabs/::1704515020
-Character.tscn::PackedScene::616007240210352436::1704515038::0::1::::<><>::res://Scripts/Controllers/PlayerController.gd<>uid://bf654fr38qc82::::res://Sprites/Prototype Character/Character Idle 48x48.png<>uid://cvm6gl605j2vm::::res://Sprites/Prototype Character/player jump 48x48.png<>uid://bhmox6ri0svpa::::res://Sprites/Prototype Character/PlayerWalk 48x48.png<>res://Scripts/Controllers/AnimationController.gd<>uid://cj2c3t68crme7::::res://Sprites/Prototype Character/player land 48x48.png<>uid://cysmgukdsk0gi::::res://Components/HitBoxComponent.tscn<>res://Scripts/Utilities/StateMachine.gd<>res://Scripts/States/Idle.gd<>res://Scripts/Utilities/InputComponent.gd
-::res://Scripts/::1704515033
-::res://Scripts/Controllers/::1704515020
+::res://Prefabs/::1704604764
+Character.tscn::PackedScene::616007240210352436::1704604766::0::1::::<><>::uid://bf654fr38qc82::::res://Sprites/Prototype Character/Character Idle 48x48.png<>uid://cvm6gl605j2vm::::res://Sprites/Prototype Character/player jump 48x48.png<>uid://bhmox6ri0svpa::::res://Sprites/Prototype Character/PlayerWalk 48x48.png<>res://Scripts/Controllers/AnimationController.gd<>uid://cj2c3t68crme7::::res://Sprites/Prototype Character/player land 48x48.png<>uid://cysmgukdsk0gi::::res://Components/HitBoxComponent.tscn<>res://Scripts/Utilities/StateMachine/StateMachine.gd<>res://Scripts/States/PlayerIdle.gd<>res://Prefabs/Walk.gd<>res://Scripts/Utilities/Input/InputComponent.gd<>res://Scripts/Input Handlers/PlayerInput.gd
+Walk.gd::GDScript::-1::1704604604::0::1::::Move<>State<>::
+::res://Scripts/::1704604741
+::res://Scripts/Controllers/::1704590020
 AnimationController.gd::GDScript::-1::1701036146::0::1::::<>AnimatedSprite2D<>::
-PlayerController.gd::GDScript::-1::1704515020::0::1::::<>CharacterBody2D<>::
-::res://Scripts/Input/::1704515033
+PlayerController.gd::GDScript::-1::1704590020::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Input Handlers/::1704604764
+PlayerInput.gd::GDScript::-1::1704601762::0::1::::PlaterInput<>InputHandler<>::
 ::res://Scripts/Misc/::1696219898
-::res://Scripts/States/::1704247166
-Idle.gd::GDScript::-1::1704247166::0::1::::<>State<>::
-::res://Scripts/Utilities/::1704515020
-InputComponent.gd::GDScript::-1::1704514931::0::1::::<>Node<>::
-InputHandler.gd::GDScript::-1::1704515020::0::1::::InputHandler<>Node<>::
-State.gd::GDScript::-1::1704168084::0::1::::State<>Node<>::
-StateMachine.gd::GDScript::-1::1704168084::0::1::::StateMachine<>Node<>::
+::res://Scripts/States/::1704602902
+Idle.gd::GDScript::-1::1704592474::0::1::::<>State<>::
+PlayerIdle.gd::GDScript::-1::1704602902::0::1::::PlayerIdle<>State<>::
+::res://Scripts/Utilities/::1704604757
+::res://Scripts/Utilities/Input/::1704604728
+InputComponent.gd::GDScript::-1::1704602057::0::1::::InputComponent<>Node<>::
+InputHandler.gd::GDScript::-1::1704590235::0::1::::InputHandler<>Node<>::
+InputState.gd::GDScript::-1::1704601516::0::1::::InputState<>RefCounted<>::
+::res://Scripts/Utilities/StateMachine/::1704604757
+State.gd::GDScript::-1::1704602614::0::1::::State<>Node<>::
+StateMachine.gd::GDScript::-1::1704604645::0::1::::StateMachine<>Node<>::
 ::res://Sprites/::1703655195
 ::res://Sprites/Prototype Character/::1699928985
 Character Idle 48x48.png::CompressedTexture2D::2803234200260701013::1696014536::1696014564::1::::<><>::

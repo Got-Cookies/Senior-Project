@@ -1,5 +1,7 @@
-Node
 State
+PlayerIdle
+InputHandler
+Node
 Timer
 AnimationTree
 AnimationPlayer
